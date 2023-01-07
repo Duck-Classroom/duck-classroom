@@ -20,12 +20,13 @@ type UserComponentProps = {
 const UserComponent: React.FC<UserComponentProps> = ({ session }) => {
   return (
     <div className="flex h-20 flex-col items-center justify-center gap-4">
-      <p className="text-2xl font-bold  ">Welcome {session?.user?.name}!</p>
-      <p className="text-xl font-medium  ">{session?.user?.email}</p>
-      <button
-        className="rounded-md bg-[#2e026d] px-4 py-2 text-lg font-semibold   text-white shadow-md hover:bg-[#15162c]"
-        onClick={() => signOut()}
-      >
+      <p className="text-2xl font-bold text-neutral/80">
+        Welcome {session?.user?.name}!
+      </p>
+      <p className="text-xl font-medium text-neutral/70">
+        {session?.user?.email}
+      </p>
+      <button className="btn-primary btn" onClick={() => signOut()}>
         Sign Out
       </button>
     </div>
@@ -35,12 +36,11 @@ const UserComponent: React.FC<UserComponentProps> = ({ session }) => {
 const GuestComponent: React.FC = () => {
   return (
     <div className="flex h-20 flex-col items-center justify-center gap-4">
-      <p className="text-2xl font-bold  ">Welcome Guest!</p>
-      <p className="text-xl font-medium  ">Please sign in to continue</p>
-      <button
-        className="rounded-md bg-[#2e026d] px-4 py-2 text-lg font-semibold   shadow-md hover:bg-[#15162c]"
-        onClick={() => signIn()}
-      >
+      <p className="text-2xl font-bold  text-neutral/80">Welcome Guest!</p>
+      <p className="text-xl font-medium  text-neutral/70">
+        Please sign in to continue
+      </p>
+      <button className="btn-primary btn" onClick={() => signIn()}>
         Sign In
       </button>
     </div>
@@ -54,10 +54,7 @@ const SkeletonComponent: React.FC = () => {
       <p className="text-xl font-medium  text-transparent">
         Please sign in to continue
       </p>
-      <button
-        className="rounded-md bg-[#2e026d] px-4 py-2 text-lg font-semibold   text-transparent shadow-md hover:bg-[#15162c]"
-        onClick={() => signIn()}
-      >
+      <button className="btn-primary btn" onClick={() => signIn()}>
         Sign In
       </button>
     </div>
