@@ -13,6 +13,19 @@ module.exports = {
       screens: {
         '3xl': '1920px',
       },
+      spacing: {
+        '1/2x': '0.625rem', // 10 px
+        '1x': '1.25rem', // 20 px
+        '2x': '2.5rem', // 40 px
+        '3x': '3.75rem', // 60 px
+        '4x': '5rem', // 80 px
+        '5x': '6.25rem', // 100 px
+        '6x': '7.5rem', // 120 px
+        '7x': '8.75rem', // 140 px
+        '8x': '10rem', // 160 px
+        '9x': '11.25rem', // 180 px
+        '10x': '12.5rem', // 200 px
+      }
     }
   },
   plugins: [require("daisyui")],

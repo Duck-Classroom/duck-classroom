@@ -12,7 +12,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children, pageName }) => {
   return (
     <div className="container mx-auto flex min-h-screen flex-col">
       <div className="flex h-full w-full flex-1 ">
-        <div className="hidden min-w-[6rem] border-2 border-red-500   md:block lg:min-w-[15rem] 3xl:min-w-[20rem]">
+        <div className="hidden min-w-[6.25rem] border-2 border-red-500   md:block lg:min-w-[15.625rem] 3xl:min-w-[20rem]">
           <SideNav pageName={pageName} />
         </div>
         <div className="w-full border-2 border-blue-500  ">
@@ -22,7 +22,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children, pageName }) => {
           {children}
         </div>
       </div>
-      <div className="min-h-[5rem] border-2 border-green-500 md:hidden">
+      <div className="min-h-[6.25rem] border-2 border-green-500 md:hidden">
         <BottomNav pageName={pageName} />
       </div>
     </div>

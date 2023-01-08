@@ -8,9 +8,9 @@ type SideNavProps = {
 const SideNav: React.FC<SideNavProps> = ({ pageName }) => {
   return (
     <div className="flex flex-col justify-center">
-      <div className="m-5 flex items-center justify-center lg:justify-evenly lg:gap-5">
+      <div className="m-1x flex items-center justify-center lg:justify-evenly lg:gap-1x">
         <Image
-          className="h-10 w-10 lg:h-16 lg:w-16 3xl:h-20 3xl:w-20"
+          className="h-2x w-2x lg:h-3x lg:w-3x 3xl:h-4x 3xl:w-4x"
           src="duck.svg"
           alt="duck logo"
           width={100}
@@ -22,14 +22,14 @@ const SideNav: React.FC<SideNavProps> = ({ pageName }) => {
         </div>
       </div>
       <nav className="flex justify-center">
-        <ul className="menu rounded-box   m-5 w-full bg-base-200/25 p-2">
+        <ul className="menu rounded-box   m-1x w-full gap-2 bg-base-200/25 p-2">
           {["dashboard", "classroom", "schedule", "settings"].map((val) => (
             <li key={val}>
               <Link
                 href={`/${val}`}
                 className={`btn-square  mx-auto lg:btn-block  ${
                   val === pageName
-                    ? "btn-secondary text-base-100"
+                    ? "btn-primary text-primary-content"
                     : "text-base-content/50 hover:text-base-content"
                 }`}
               >

@@ -13,7 +13,9 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ size = "md" }) => {
     lg: "10",
     xl: "12",
   };
+
   const computedSize = sizeMap[size];
+
   // useEffect only runs on the client, so now we can safely show the UI
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -29,7 +31,7 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ size = "md" }) => {
   };
   return (
     <>
-      <label className="swap-rotate swap">
+      <label className="swap swap-rotate">
         <input
           aria-label="Toggle Dark Mode"
           type="checkbox"
