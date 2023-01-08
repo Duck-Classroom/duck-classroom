@@ -2,15 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import type { PageName } from "../../../types/pageName";
 
-type LeftNavPaneProps = {
+type SideNavProps = {
   pageName: PageName;
 };
-const LeftNavPane: React.FC<LeftNavPaneProps> = ({ pageName }) => {
+const SideNav: React.FC<SideNavProps> = ({ pageName }) => {
   return (
     <div className="flex flex-col justify-center">
-      <div className="flex items-center justify-evenly gap-5 p-5">
+      <div className="m-5 flex items-center justify-center lg:justify-evenly lg:gap-5">
         <Image
-          className="h-10 w-10 lg:h-16 lg:w-16 2xl:h-20 3xl:w-20"
+          className="h-10 w-10 lg:h-16 lg:w-16 3xl:h-20 3xl:w-20"
           src="duck.svg"
           alt="duck logo"
           width={100}
@@ -21,8 +21,8 @@ const LeftNavPane: React.FC<LeftNavPaneProps> = ({ pageName }) => {
           Classroom
         </div>
       </div>
-      <nav className="lg:m-5">
-        <ul className="menu rounded-box bg-base-200/25 p-2">
+      <nav className="flex justify-center">
+        <ul className="menu rounded-box   m-5 w-full bg-base-200/25 p-2">
           {["dashboard", "classroom", "schedule", "settings"].map((val) => (
             <li key={val}>
               <Link
@@ -59,4 +59,4 @@ const LeftNavPane: React.FC<LeftNavPaneProps> = ({ pageName }) => {
   );
 };
 
-export default LeftNavPane;
+export default SideNav;
